@@ -1,0 +1,27 @@
+@mixin active {
+  &::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 40px;
+    left: -4px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 20%;
+    background: $second-color;
+  }
+}
+
+@mixin divider {
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 32px;
+    width: 2px;
+    background: #eaeaea;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -20px;
+  }
+}

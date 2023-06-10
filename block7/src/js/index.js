@@ -1,3 +1,5 @@
 import '../scss/style.scss'
-
-console.log('Works!')
+import '../js/blocks/swiper.js'
+import '../js/blocks/hiddenContentBtn.js'
+import '../js/blocks/main.js'
+import '../js/blocks/aside.js'

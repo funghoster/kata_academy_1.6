@@ -1,0 +1,208 @@
+.menu {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: calc(-100% - 52px);
+  width: 320px;
+  height: 100%;
+  padding: 18px 24px 32px 24px;
+  box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02),
+    16px 0px 52px rgba(14, 24, 80, 0.2);
+  overflow: scroll;
+  overflow-x: hidden;
+  background: #ffffff;
+  z-index: 100;
+  opacity: 1;
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+  &--active {
+    left: 0;
+    z-index: 100;
+    &::before {
+      content: '';
+      background: #ffffff;
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.9;
+      z-index: -1;
+    }
+  }
+  &__header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    &__logo {
+      display: block;
+    }
+    &--close {
+      margin-right: 17px;
+      background-image: url('../img/icons/aside/close.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    &--search {
+      margin-left: auto;
+      background-image: url('../img/icons/aside/menu_search.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+  &__links {
+    margin: 50px 0 0 0;
+    height: 416px;
+    display: flex;
+    padding: 0;
+    list-style-type: none;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__link {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 24px;
+    color: #1b1c21;
+    letter-spacing: -0.2px;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 8px;
+      height: 40px;
+      left: -28px;
+      top: 50%;
+      transform: translateY(-50%);
+      border-radius: 20%;
+      background: #41f6d7;
+      opacity: 0;
+    }
+    &:hover {
+      &::after {
+        opacity: 1;
+      }
+    }
+    &--active {
+      position: relative;
+      color: #7e7e82;
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+  &__footer {
+    height: 188px;
+    margin-top: 268px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  &__btns {
+    display: flex;
+    div {
+      margin-right: 16px;
+    }
+  }
+  &__btn {
+    margin-right: 16px;
+    &--call {
+      background-image: url('../img/icons/aside/call.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    &--chat {
+      background-image: url('../img/icons/aside/chat.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    &--profile {
+      background-image: url('../img/icons/aside/profile.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+  &__mail {
+    display: block;
+    margin-top: 16px;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 24px;
+    color: #1b1c21;
+    transition: all 0.3s ease;
+  }
+  &__tel {
+    display: block;
+    margin-top: 12px;
+    text-decoration: none;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: bold;
+    color: #1b1c21;
+    transition: all 0.3s ease;
+  }
+  &__langs {
+    margin-top: auto;
+    display: flex;
+    input[type='radio'] {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      border: 0;
+      padding: 0;
+      clip: rect(0 0 0 0);
+      overflow: hidden;
+    }
+    label {
+      display: block;
+      cursor: pointer;
+      font-size: 16px;
+      line-height: 24px;
+    }
+    label:hover {
+      opacity: 0.6;
+    }
+    input[type='radio']:checked + label {
+      opacity: 0.6;
+    }
+    input[type='radio']:active + label {
+      opacity: 0.6;
+    }
+  }
+  &__lang {
+    margin-right: 7px;
+  }
+  &__background {
+    display: none;
+    &--active {
+      display: block;
+      position: fixed;
+      z-index: -10;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: #ffffff;
+      opacity: 0.96;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .menu {
+    float: left;
+    left: 0;
+    position: unset;
+    box-shadow: none;
+    height: auto;
+    &__header {
+      &--close {
+        display: none;
+      }
+    }
+  }
+}

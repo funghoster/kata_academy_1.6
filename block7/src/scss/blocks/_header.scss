@@ -1,0 +1,87 @@
+.header {
+  height: 88px;
+  &__container {
+    display: flex;
+    margin-top: -10px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 16px;
+  }
+  &__logo {
+    display: block;
+    position: relative;
+    margin: 0 16.73px;
+    @include divider;
+  }
+  &__left {
+    display: flex;
+    align-items: center;
+  }
+  &__right {
+    display: flex;
+    align-items: center;
+    &-basic {
+      display: flex;
+      align-items: center;
+    }
+    &-add {
+      display: none;
+    }
+  }
+  &__repair {
+    margin-right: 16px;
+  }
+  &__menu {
+      background-image: url('../img/icons/header/menu.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+  }
+  &__call {
+      background-image: url('../img/icons/header/call.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+  }
+  &__chat {
+      background-image: url('../img/icons/header/chat.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+  }
+  &__profile {
+      background-image: url('../img/icons/header/profile.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+  }
+  &__repair {
+      background-image: url('../img/icons/header/repair.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+  }
+  &__search {
+      background-image: url('../img/icons/header/search.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+  }
+}
+@media (min-width: 768px) {
+  .header {
+    &__container {
+        padding: 24px 25px;
+    }
+    &__right-add {
+      display: flex;
+      position: relative;
+      align-items: center;
+      margin-right: 42px;
+      @include divider;
+    }
+    &__chat {
+      margin: 0 16px;
+    }
+  }
+}
+
+@media (min-width: 1120px) {
+  .header {
+    display: none;
+  }
+}
