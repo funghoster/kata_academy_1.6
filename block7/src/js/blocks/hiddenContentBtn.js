@@ -33,3 +33,21 @@ for (const button of brandsButtons) {
     }
   })
 }
+
+const repairButtons = document.getElementsByClassName('repair__btn')
+for (const button of repairButtons) {
+  button.addEventListener('click', (e) => {
+    e.target.classList.toggle('btn-hidden')
+    if (e.target.nextElementSibling.classList.contains('repair__btn')) {
+      e.target.nextElementSibling.classList.toggle('btn-hidden')
+      document
+        .querySelector('.repair__content')
+        .classList.add('repair__content--full')
+    } else {
+      e.target.previousElementSibling.classList.toggle('btn-hidden')
+      document
+        .querySelector('.repair__content')
+        .classList.remove('repair__content--full')
+    }
+  })
+}

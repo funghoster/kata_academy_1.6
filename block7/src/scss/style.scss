@@ -41,6 +41,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  background-color: $main-bgc;
+}
 button {
   border: none;
   background-color: inherit;
@@ -109,7 +112,11 @@ button.btn-hidden {
   }
 }
 
+@import 'blocks/general';
 @import 'blocks/header';
 @import 'blocks/main';
 @import 'blocks/brands';
 @import 'blocks/aside';
+@import 'blocks/repair';
+@import 'blocks/services';
+@import 'blocks/footer';

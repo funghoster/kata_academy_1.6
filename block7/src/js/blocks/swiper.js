@@ -19,8 +19,10 @@ window.addEventListener('resize', function () {
   if (width < 768) {
     swiper.enable()
   } else {
-    const transform = document.querySelector('.brands__content')
+    const transformBrands = document.querySelector('.brands__content')
+    const transformRepair = document.querySelector('.repair__content')
     swiper.disable()
-    transform.style.transform = 'none'
+    transformBrands.style.transform = 'none'
+    transformRepair.style.transform = 'none'
   }
 })
